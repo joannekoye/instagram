@@ -30,13 +30,13 @@ class Image(models.Model):
     caption = models.TextField(blank = True)
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     upload_date = models.DateTimeField(auto_now_add=True)
-    likes = models.ForeignKey(Likes)
+    likes = models.ForeignKey(Likes,on_delete=models.CASCADE)
     comments = models.ManyToManyField(Comment)
 
     def __str__(self):
         return self.name
 
-Comment.image = models.ForeignKey(Image)
-Likes.image = models.ForeignKey(Image)
+Comment.image = models.ForeignKey(Image, on_delete=models.CASCADE)
+Likes.image = models.ForeignKey(Image, on_delete=models.CASCADE)
 
 
