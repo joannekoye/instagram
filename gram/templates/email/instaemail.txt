@@ -1,0 +1,4 @@
+Hello {{name}}
+
+Registration Confirmed. Upload photos, follow users, get followed and like and comment on pictures.
+We are happy you are part of us!!
