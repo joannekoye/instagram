@@ -52,8 +52,8 @@ class Image(models.Model):
         return self.caption
 
 class Contact(models.Model):
-    user_from = models.ForeignKey(User, related_name='rel_from_set')
-    user_to = models.ForeignKey(User, related_name='rel_to_set')
+    user_from = models.ForeignKey(User, related_name='rel_from_set', on_delete = models.CASCADE )
+    user_to = models.ForeignKey(User, related_name='rel_to_set', on_delete = models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
