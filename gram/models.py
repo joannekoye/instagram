@@ -21,7 +21,7 @@ class Comment(models.Model):
     def __str__(self):
         return self.comment
 
-class Likes(models.Model):
+class Like(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 
 class Image(models.Model):
